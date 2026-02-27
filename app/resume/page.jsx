@@ -216,7 +216,7 @@ const Resume = () => {
                       return (
                         <li 
                         key={index} 
-                        className="bg-[#2323] h-[184px] py-6 px-10 rounded-xl flex 
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex 
                         flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
@@ -250,7 +250,7 @@ const Resume = () => {
                       return (
                         <li 
                         key={index} 
-                        className="bg-[#2323] h-[184px] py-6 px-10 rounded-xl flex 
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex 
                         flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
@@ -270,36 +270,36 @@ const Resume = () => {
               </div>
             </TabsContent>
             {/* skills content */}
-            <TabsContent value="skills" className="w-full h-full"> 
+            <TabsContent value="skills" className="w-full"> 
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.tittle}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {skills.description}
-                  </p>
+                <h3 className="text-4xl font-bold">{skills.tittle}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                {skills.description}
+                </p>
                 {/*contenderor scroll */}
                 <ScrollArea className="h-[350px] w-full">
                   <div className="w-full" >
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 xl:gap-[30px]">
-                  {skills.skilllist.map((skill, index) => {
-                    return (
-                    <li key={index}>
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl 
-                          flex items-center justify-center group">
-                            <div className="text-6xl group-hover:text-accent
-                            transition-all duration-300">
-                              {skill.Icon}</div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </li>
-                    );
-                  })}
-                </ul>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 xl:gap-[30px]">
+                    {skills.skilllist.map((skill, index) => {
+                      return (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl 
+                            flex items-center justify-center group">
+                              <div className="text-6xl group-hover:text-accent
+                              transition-all duration-300">
+                                {skill.Icon}</div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                      );
+                    })}
+                  </ul>
                 </div>
               </ScrollArea>
               </div>

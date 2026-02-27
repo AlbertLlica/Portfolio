@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 const Header = () => {
-  return( <header className="py-8 xl:py-12 text-white bg-pink-50/20">
+  return( <header className="py-8 xl:py-12 text-white">
     <div className="container mx-auto flex justify-between items-center">
     {/*Logo */}
         <Link href="/">
