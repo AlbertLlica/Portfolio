@@ -44,10 +44,16 @@ const sheetVariants = cva(
   }
 )
 
-const SheetContent = React.forwardRef(({ side = "right", className, children, ...props }, ref) => (
+const SheetContent = React.forwardRef(({ side = "right", className, children, title = "", ...props }, ref) => (
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
+      {/* accessibility: ensure a title exists for screen readers; hide visually if provided */}
+      {title && (
+        <SheetPrimitive.Title className="sr-only">
+          {title}
+        </SheetPrimitive.Title>
+      )}
       <SheetPrimitive.Close
         className="absolute right-8 top-8 transition-opacity
         outline-none">
