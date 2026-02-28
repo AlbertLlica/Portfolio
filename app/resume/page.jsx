@@ -11,162 +11,14 @@ import {
   FaPython,
 } from "react-icons/fa";
 
-import {SiTailwindcss, SiNextdotjs, SiFastapi, SiFlutter} from "react-icons/si"
+import {SiTailwindcss, SiNextdotjs, SiFastapi, SiFlutter} from "react-icons/si";
 
-// about data
-const about = {
-  "title": "About Me",
-  "description": "I am a passionate software developer with a strong background in web development. I have experience working with various programming languages and frameworks, and I am always eager to learn new technologies. I enjoy creating elegant and efficient solutions to complex problems, and I am committed to delivering high-quality work.",
-  info: [
-    { fieldName: "Name", 
-      fieldValue: "Albert Llica" 
-    },
-    { fieldName: "Phone", 
-      fieldValue: "(+51) 971461734" 
-    },
-    { fieldName: "Experience", 
-      fieldValue: "2 years" 
-    },
-    { fieldName: "Email", 
-      fieldValue: "albertllica@gmail.com" 
-    },
-    { fieldName: "Nationality", 
-      fieldValue: "Peruvian" 
-    },
-    { fieldName: "Freelance", 
-      fieldValue: "Available" 
-    },
-    { fieldName: "Languages", 
-      fieldValue: "Spanish, English" 
-    },
-  ]
-}
+// data is now driven from translation files
 
-// experience data
-const experience = {
-  icon: '/assets/resume/badge.svg',
-  tittle: 'Experience',
-  description: 'I have worked on various projects, both independently and as part of a team. I have experience in front-end development, back-end development, and full-stack development. I have also worked on projects involving database management, API development, and cloud computing.',
-  items: [
-    {
-      position: 'Software Developer',
-      company: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      position: 'Software Developer',
-      company: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      position: 'Software Developer',
-      company: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      position: 'Software Developer',
-      company: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      position: 'Software Developer',
-      company: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      position: 'Software Developer',
-      company: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-  ]
-};
+import { useLanguage } from "../../contexts/LanguageContext";
 
-// education data
-const education = {
-  icon: '/assets/resume/badge.svg',
-  tittle: 'Education',
-  description: 'I have worked on various projects, both independently and as part of a team. I have experience in front-end development, back-end development, and full-stack development. I have also worked on projects involving database management, API development, and cloud computing.',
-  items: [
-    {
-      institution: 'Software Developer',
-      degree: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      institution: 'Software Developer',
-      degree: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      institution: 'Software Developer',
-      degree: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      institution: 'Software Developer',
-      degree: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-    {
-      institution: 'Software Developer',
-      degree: 'Tech Company',
-      duration: 'Jan 2022 - Present',
-    },
-  ]
-};
+// helper to map paragraph data or arrays if required
 
-// skills data
-const skills = {
-  icon: '/assets/resume/badge.svg',
-  tittle: 'Skills',
-  description: 'I have worked on various projects, both independently and as part of a team. I have experience in front-end development, back-end development, and full-stack development. I have also worked on projects involving database management, API development, and cloud computing.',
-  skilllist: [
-    {
-      Icon: <FaHtml5/>,
-      name: 'HTML5',
-    },
-    {
-      Icon: <FaCss3/>,
-      name: 'CSS3',
-    },
-    {
-      Icon: <FaJs/>,
-      name: 'JavaScript',
-    },
-    {
-      Icon: <FaReact/>,
-      name: 'React',
-    },
-    {
-      Icon: <SiTailwindcss/>,
-      name: 'Tailwind CSS',
-    },
-    {
-      Icon: <SiNextdotjs/>,
-      name: 'Next.js',
-    },
-    {
-      Icon: <FaNodeJs/>,
-      name: 'Node.js',
-    },
-    {
-      Icon: <FaFigma/>,
-      name: 'Figma',
-    },
-    {
-      Icon: <FaPython/>,
-      name: 'Python',
-    },
-    {
-      Icon: <SiFastapi/>,
-      name: 'FastAPI',
-    },
-    {
-      Icon: <SiFlutter/>,
-      name: 'Flutter',
-    },
-  ]
-};
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -180,6 +32,12 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import {motion} from "framer-motion"
 
 const Resume = () => {
+  const { t } = useLanguage();
+  const about = t("resume.about", { returnObjects: true }) || {};
+  const experience = t("resume.experience", { returnObjects: true }) || {};
+  const education = t("resume.education", { returnObjects: true }) || {};
+  const skills = t("resume.skills", { returnObjects: true }) || {};
+
   return (
     <motion.div
     initial={{opacity: 0}}
@@ -194,10 +52,10 @@ const Resume = () => {
           defaultValue="experience" 
           className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About Me</TabsTrigger>
+            <TabsTrigger value="experience">{t("resume.tabs.experience")}</TabsTrigger>
+            <TabsTrigger value="education">{t("resume.tabs.education")}</TabsTrigger>
+            <TabsTrigger value="skills">{t("resume.tabs.skills")}</TabsTrigger>
+            <TabsTrigger value="about">{t("resume.tabs.about")}</TabsTrigger>
           </TabsList>
           {/*content */}
           <div className="min-h-[70vh] w-full">

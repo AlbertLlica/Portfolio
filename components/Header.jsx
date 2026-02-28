@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-
+import { useLanguage } from "../contexts/LanguageContext";
 //components
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import LanguageSwitcher from "./LanguageSwitcher";
+
 const Header = () => {
+  const { t } = useLanguage();
   return( <header className="py-8 xl:py-12 text-white">
     <div className="container mx-auto flex justify-between items-center">
     {/*Logo */}
@@ -16,19 +21,18 @@ const Header = () => {
         </Link>
 
 
-        {/* desktop nov & hire me button*/}
+        {/* desktop nav & hire me button*/}
         <div className="hidden xl:flex items-center gap-8">
            <Nav /> 
            <Link href="/contact">
-            <Button>Hire me</Button>
+            <Button>{t("header.hireMe")}</Button>
            </Link>
+           <LanguageSwitcher />
         </div>
         
-        {/*mobile nov*/}
+        {/*mobile nav*/}
         <div className="xl:hidden">
-          <MobileNav >
-
-          </MobileNav>
+          <MobileNav />
         </div>
     </div>
   </header>

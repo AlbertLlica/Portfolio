@@ -1,0 +1,207 @@
+{
+  "nav": {
+    "home": "inicio",
+    "services": "servicios",
+    "resume": "currículum",
+    "work": "trabajo",
+    "contact": "contacto"
+  },
+  "header": {
+    "hireMe": "Contrátame"
+  },
+  "home": {
+    "profession": "Desarrollador de software",
+    "greeting": "Hola soy",
+    "intro": "Me destaco en crear experiencias digitales elegantes y soy competente en varios lenguajes de programación y tecnologías.",
+    "downloadCV": "Descargar CV"
+  },
+  "services": {
+    "items": [
+      {
+        "num": "01",
+        "title": "Desarrollo Web",
+        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas."
+      },
+      {
+        "num": "02",
+        "title": "Diseño UX/UI",
+        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas."
+      },
+      {
+        "num": "03",
+        "title": "Análisis de Datos",
+        "description": "Analizo y visualizo datos para extraer información significativa."
+      },
+      {
+        "num": "04",
+        "title": "Desarrollo Móvil",
+        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas."
+      }
+    ]
+  },
+  "resume": {
+    "tabs": {
+      "experience": "Experiencia",
+      "education": "Educación",
+      "skills": "Habilidades",
+      "about": "Sobre mí"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "description": "Soy un desarrollador de software apasionado con una sólida experiencia en desarrollo web. Tengo experiencia trabajando con varios lenguajes de programación y frameworks, y siempre estoy ansioso por aprender nuevas tecnologías. Disfruto creando soluciones elegantes y eficientes para problemas complejos, y estoy comprometido a entregar trabajo de alta calidad.",
+      "info": {
+        "name": "Nombre",
+        "phone": "Teléfono",
+        "experience": "Experiencia",
+        "email": "Correo electrónico",
+        "nationality": "Nacionalidad",
+        "freelance": "Freelance",
+        "languages": "Idiomas"
+      }
+    },
+    "experience": {
+      "title": "Experiencia",
+      "description": "He trabajado en varios proyectos, tanto de forma independiente como en equipo. Tengo experiencia en desarrollo frontend, backend y full-stack. También he trabajado en proyectos que involucran gestión de bases de datos, desarrollo de APIs y computación en la nube.",
+      "items": [
+        {
+          "position": "Desarrollador de Software",
+          "company": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "position": "Desarrollador de Software",
+          "company": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "position": "Desarrollador de Software",
+          "company": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "position": "Desarrollador de Software",
+          "company": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "position": "Desarrollador de Software",
+          "company": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "position": "Desarrollador de Software",
+          "company": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        }
+      ]
+    },
+    "education": {
+      "title": "Educación",
+      "description": "He trabajado en varios proyectos, tanto de forma independiente como en equipo. Tengo experiencia en desarrollo frontend, backend y full-stack. También he trabajado en proyectos que involucran gestión de bases de datos, desarrollo de APIs y computación en la nube.",
+      "items": [
+        {
+          "institution": "Desarrollador de Software",
+          "degree": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "institution": "Desarrollador de Software",
+          "degree": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "institution": "Desarrollador de Software",
+          "degree": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "institution": "Desarrollador de Software",
+          "degree": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        },
+        {
+          "institution": "Desarrollador de Software",
+          "degree": "Empresa Tecnológica",
+          "duration": "Ene 2022 - Presente"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Habilidades",
+      "description": "He trabajado en varios proyectos, tanto de forma independiente como en equipo. Tengo experiencia en desarrollo frontend, backend y full-stack. También he trabajado en proyectos que involucran gestión de bases de datos, desarrollo de APIs y computación en la nube."
+    }
+  },
+  "contact": {
+    "form": {
+      "heading": "¡Trabajemos juntos!",
+      "paragraph": "Estoy abierto a nuevas oportunidades y colaboraciones. Ya sea que tengas un proyecto en mente o solo quieras saludar, no dudes en contactarme. ¡Espero saber de ti!",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "phone": "Número de teléfono",
+      "servicePlaceholder": "Selecciona un servicio",
+      "servicesLabel": "Servicios",
+      "services": {
+        "web": "Desarrollo Web",
+        "mobile": "Desarrollo de Apps Móviles",
+        "ui": "Diseño UI/UX",
+        "other": "Otro"
+      },
+      "message": "Tu mensaje aquí...",
+      "send": "Enviar mensaje"
+    },
+    "info": {
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "address": "Dirección"
+    }
+  },
+  "stats": [
+    { "num": 12, "text": "Años de experiencia" },
+    { "num": 26, "text": "Proyectos completados" },
+    { "num": 8, "text": "Tecnologías dominadas" },
+    { "num": 500, "text": "Commits de código" }
+  ],
+  "work": {
+    "project": "proyecto",
+    "categories": {
+      "frontend": "frontend"
+    },
+    "tooltip": {
+      "live": "Proyecto en vivo",
+      "github": "Repositorio de GitHub"
+    },
+    "items": [
+      {
+        "num": "01",
+        "category": "frontend",
+        "title": "Proyecto 1",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
+        "image": "/assets/work/thumb1.png",
+        "live": "",
+        "github": "https://github.com/example/project1",
+        "stack": [{"name": "Html 5"}, {"name": "Css 3"}, {"name": "JavaScript"}]
+      },
+      {
+        "num": "02",
+        "category": "frontend",
+        "title": "Proyecto 2",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
+        "image": "/assets/work/thumb2.png",
+        "live": "",
+        "github": "https://github.com/example/project2",
+        "stack": [{"name": "Html 5"}, {"name": "Tailwind.css"}, {"name": "JavaScript"}]
+      },
+      {
+        "num": "03",
+        "category": "frontend",
+        "title": "Proyecto 3 ",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
+        "image": "/assets/work/thumb3.png",
+        "live": "",
+        "github": "https://github.com/example/project3",
+        "stack": [{"name": "Html 5"}, {"name": "Tailwind.css"}, {"name": "JavaScript"}]
+      }
+    ]
+  }
+}

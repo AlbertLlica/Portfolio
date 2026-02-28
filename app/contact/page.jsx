@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 import {
   Select,
@@ -15,28 +16,28 @@ import {
 } from "@/components/ui/select";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-
-const info = [
-  {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "+123 456 7890",
-  },
-  {
-    icon: <FaEnvelope />,
-    title: "Email",
-    description: "contact@example.com",
-  },
-  {
-    icon: <FaMapMarkerAlt />,
-    title: "Adress",
-    description: "123 Main Street, City, Country",
-  },
-];
-
 import {motion} from "framer-motion";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  const info = [
+    {
+      icon: <FaPhoneAlt />, 
+      title: t("contact.info.phone"),
+      description: "+123 456 7890",
+    },
+    {
+      icon: <FaEnvelope />, 
+      title: t("contact.info.email"),
+      description: "contact@example.com",
+    },
+    {
+      icon: <FaMapMarkerAlt />, 
+      title: t("contact.info.address"),
+      description: "123 Main Street, City, Country",
+    },
+  ];
+
   return (
      <motion.section 
           initial={{ opacity: 0}}
@@ -52,37 +53,37 @@ const Contact = () => {
               <div className="xl:h-[54%] order-2 xl:order-none">
                 <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
                   <h3 className="text-4xl text-accent">
-                    Let's work together! <br />
+                    {t("contact.form.heading")} <br />
                   </h3>
                   <p className="text-white/60">
-                    I'm open to new opportunities and collaborations. Whether you have a project in mind or just want to say hi, feel free to reach out. I look forward to hearing from you!
+                    {t("contact.form.paragraph")}
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Input type="firstname" placeholder="First name" />
-                    <Input type="lastname" placeholder="Last name" />
-                    <Input type="email" placeholder="Email"/>
-                    <Input type="phone" placeholder="Phone number"/>
+                    <Input type="firstname" placeholder={t("contact.form.firstName")} />
+                    <Input type="lastname" placeholder={t("contact.form.lastName")} />
+                    <Input type="email" placeholder={t("contact.form.email")} />
+                    <Input type="phone" placeholder={t("contact.form.phone")} />
                   </div>
                   {/* select */}
                   <Select>
                     <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select a service" />
-                     </SelectTrigger>
-                     <SelectContent>
+                      <SelectValue placeholder={t("contact.form.servicePlaceholder")} />
+                    </SelectTrigger>
+                    <SelectContent>
                       <SelectGroup>
-                        <SelectLabel>Services</SelectLabel>
-                        <SelectItem value="web">Web Development</SelectItem>
-                        <SelectItem value="mobile">Mobile App Development</SelectItem>
-                        <SelectItem value="ui">UI/UX Design</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                        <SelectLabel>{t("contact.form.servicesLabel")}</SelectLabel>
+                        <SelectItem value="web">{t("contact.form.services.web")}</SelectItem>
+                        <SelectItem value="mobile">{t("contact.form.services.mobile")}</SelectItem>
+                        <SelectItem value="ui">{t("contact.form.services.ui")}</SelectItem>
+                        <SelectItem value="other">{t("contact.form.services.other")}</SelectItem>
                       </SelectGroup>
-                     </SelectContent>
+                    </SelectContent>
                   </Select>
                   {/* text area */}
                   <Textarea className="h-[200px]" 
-                  placeholder="Your message here..." />
+                  placeholder={t("contact.form.message")} />
                   {/* button */}
-                  <Button size="md" className="max-w-40">Send Message</Button>
+                  <Button size="md" className="max-w-40">{t("contact.form.send")}</Button>
                 </form>
               </div>
               {/*info*/}

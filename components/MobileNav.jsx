@@ -4,6 +4,8 @@ import {Sheet, SheetContent, SheetTrigger} from '@/components/ui/sheet';
 import {usePathname} from "next/navigation";
 import Link from "next/link";
 import {CiMenuFries} from "react-icons/ci";
+import { useLanguage } from "../contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const links = [
     {
@@ -30,6 +32,7 @@ const links = [
 
 const MobileNav = () => {
   const pathname = usePathname();
+  const { t } = useLanguage();
   return (
   <Sheet>
     <SheetTrigger className="flex justify-center items-center">
@@ -58,11 +61,15 @@ const MobileNav = () => {
                          "text-accent border-b-2 border-accent"
                         } text-xl capitalize hover:text-accent transition-all`}
                 >
-                    {link.name}
+                    {t(`nav.${link.name}`)}
                 </Link>
                 );
             })}
         </nav>
+        {/* language toggle */}
+        <div className="mt-8 flex justify-center">
+          <LanguageSwitcher />
+        </div>
     </SheetContent>
   </Sheet>
   );

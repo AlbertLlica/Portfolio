@@ -6,6 +6,9 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
+// i18n provider
+import { LanguageProvider } from "@/contexts/LanguageContext";
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"], 
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -22,13 +25,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={jetbrainsMono.variable}>
-        <Header />
-        <StairTransition>
-          
-        </StairTransition>
-        <PageTransition>
-          {children}
-        </PageTransition>
+        <LanguageProvider>
+          <Header />
+          <StairTransition>
+          </StairTransition>
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </LanguageProvider>
       </body>
     </html>
   );

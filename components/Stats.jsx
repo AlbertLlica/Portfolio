@@ -2,26 +2,14 @@
 
 import CountUp from "react-countup";
 
-const stats = [
-    {
-        num:12,
-        text: "Years of Experience"
-    },
-    {
-        num:26,
-        text: "Projects Completed"
-    },
-    {
-        num:8,
-        text: "Technologies Mastered"
-    },
-    {
-        num:500,
-        text: "Code commits"
-    }
-]
+import { useLanguage } from "../contexts/LanguageContext";
+
+
 
 const Stats = () => {
+  const { t } = useLanguage();
+  const stats = t("stats", { returnObjects: true }) || [];
+
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
         <div className="container mx-auto">

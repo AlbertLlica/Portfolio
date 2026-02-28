@@ -19,42 +19,11 @@ import Link from "next/link";
 import Image  from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
-const projects = [
-  {
-    num: "01",
-    category: "frontend",
-    title: "Project 1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
-    stack: [{name: "Html 5"} , {name: "Css 3"}, {name: "JavaScript"}],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "https://github.com/example/project1",
-  },
-  {
-    num: "02",
-    category: "frontend",
-    title: "Project 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
-    stack: [{name: "Html 5"} , {name: "Tailwind.css"}, {name: "JavaScript"}],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "https://github.com/example/project2",
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "Project 3 ",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
-    stack: [{name: "Html 5"} , {name: "Tailwind.css"}, {name: "JavaScript"}],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "https://github.com/example/project3",
-  },
-];
-
-
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Work = () => {
+  const { t } = useLanguage();
+  const projects = t("work.items", { returnObjects: true }) || [];
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
@@ -85,7 +54,7 @@ const Work = () => {
               {/*project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent
               transition-all duration-500 capitalize">
-                {project.category} project
+                {t(`work.categories.${project.category}`)} {t("work.project")}
               </h2>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
@@ -114,7 +83,7 @@ const Work = () => {
                       <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>Live project</p>
+                      <p>{t("work.tooltip.live")}</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
@@ -128,7 +97,7 @@ const Work = () => {
                       <BsGithub className="text-white text-3xl group-hover:text-accent"/>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p>GitHub repository</p>
+                      <p>{t("work.tooltip.github")}</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>

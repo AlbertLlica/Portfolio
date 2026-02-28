@@ -2,37 +2,17 @@
 
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link"; 
+import { useLanguage } from "../../contexts/LanguageContext";
 
-const services = [
-  {
-    num: "01",
-    title: "Web Development",
-    description: "I create responsive and user-friendly websites using modern technologies.",
-    href:""
-  },
-  {
-    num: "02",
-    title: "UX/UI Design",
-    description: "I create responsive and user-friendly websites using modern technologies.",
-    href:""
-  },
-  {
-    num: "03",
-    title: "Data Analysis",
-    description: "I analyze and visualize data to extract meaningful insights.",
-    href:""
-  },
-  {
-    num: "04",
-    title: "Mobile Development",
-    description: "I create responsive and user-friendly websites using modern technologies.",
-    href:""
-  },
-]
+// we'll read services from translations
+
 
 import {motion} from "framer-motion"
 
 const Services = () => {
+  const { t } = useLanguage();
+  const services = t("services.items") || [];
+
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
