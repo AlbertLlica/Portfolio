@@ -11,7 +11,10 @@ import {motion} from "framer-motion"
 
 const Services = () => {
   const { t } = useLanguage();
-  const services = t("services.items") || [];
+  let services = t("services.items", { returnObjects: true });
+  if (!Array.isArray(services)) {
+    services = [];
+  }
 
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
@@ -25,6 +28,7 @@ const Services = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
           {services.map((service, index) => {
+            const href = service.href || "#";
             return (
             <div 
               key={index}
@@ -36,7 +40,7 @@ const Services = () => {
                 text-transparent group-hover:text-outline-hover transition-all 
                 duration-500">
                   {service.num}</div>
-                <Link href={service.href} className="w-[70px] h-[70px] rounded-full 
+                <Link href={href} className="w-[70px] h-[70px] rounded-full 
                 bg-white group-hover:bg-accent transition-all duration-500 flex
                 justify-center items-center hover:-rotate-45">
                   <BsArrowDownRight className="text-primary text-3xl" />

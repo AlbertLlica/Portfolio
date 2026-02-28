@@ -31,12 +31,31 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {motion} from "framer-motion"
 
+// Icon mapping for skills (cannot be translated, fixed icons)
+const skillIconMap = {
+  "HTML5": <FaHtml5/>,
+  "CSS3": <FaCss3/>,
+  "JavaScript": <FaJs/>,
+  "React": <FaReact/>,
+  "Tailwind CSS": <SiTailwindcss/>,
+  "Next.js": <SiNextdotjs/>,
+  "Node.js": <FaNodeJs/>,
+  "Figma": <FaFigma/>,
+  "Python": <FaPython/>,
+  "FastAPI": <SiFastapi/>,
+  "Flutter": <SiFlutter/>,
+};
+
 const Resume = () => {
   const { t } = useLanguage();
   const about = t("resume.about", { returnObjects: true }) || {};
+  if (!Array.isArray(about.info)) about.info = [];
   const experience = t("resume.experience", { returnObjects: true }) || {};
+  if (!Array.isArray(experience.items)) experience.items = [];
   const education = t("resume.education", { returnObjects: true }) || {};
+  if (!Array.isArray(education.items)) education.items = [];
   const skills = t("resume.skills", { returnObjects: true }) || {};
+  if (!Array.isArray(skills.skilllist)) skills.skilllist = [];
 
   return (
     <motion.div
@@ -62,7 +81,7 @@ const Resume = () => {
             {/* experience content */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.tittle}</h3>
+                <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                 {experience.description}
                 </p>
@@ -96,7 +115,7 @@ const Resume = () => {
             {/* education content */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.tittle}</h3>
+                <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                 {education.description}
                 </p>
@@ -130,7 +149,7 @@ const Resume = () => {
             {/* skills content */}
             <TabsContent value="skills" className="w-full"> 
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{skills.tittle}</h3>
+                <h3 className="text-4xl font-bold">{skills.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                 {skills.description}
                 </p>
@@ -147,7 +166,8 @@ const Resume = () => {
                             flex items-center justify-center group">
                               <div className="text-6xl group-hover:text-accent
                               transition-all duration-300">
-                                {skill.Icon}</div>
+                                {skillIconMap[skill.name] || null}
+                              </div>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize">{skill.name}</p>

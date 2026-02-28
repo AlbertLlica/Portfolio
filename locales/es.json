@@ -20,22 +20,26 @@
       {
         "num": "01",
         "title": "Desarrollo Web",
-        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas."
+        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas.",
+        "href": ""
       },
       {
         "num": "02",
         "title": "Diseño UX/UI",
-        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas."
+        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas.",
+        "href": ""
       },
       {
         "num": "03",
         "title": "Análisis de Datos",
-        "description": "Analizo y visualizo datos para extraer información significativa."
+        "description": "Analizo y visualizo datos para extraer información significativa.",
+        "href": ""
       },
       {
         "num": "04",
         "title": "Desarrollo Móvil",
-        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas."
+        "description": "Creo sitios web responsivos y fáciles de usar utilizando tecnologías modernas.",
+        "href": ""
       }
     ]
   },
@@ -49,15 +53,15 @@
     "about": {
       "title": "Sobre mí",
       "description": "Soy un desarrollador de software apasionado con una sólida experiencia en desarrollo web. Tengo experiencia trabajando con varios lenguajes de programación y frameworks, y siempre estoy ansioso por aprender nuevas tecnologías. Disfruto creando soluciones elegantes y eficientes para problemas complejos, y estoy comprometido a entregar trabajo de alta calidad.",
-      "info": {
-        "name": "Nombre",
-        "phone": "Teléfono",
-        "experience": "Experiencia",
-        "email": "Correo electrónico",
-        "nationality": "Nacionalidad",
-        "freelance": "Freelance",
-        "languages": "Idiomas"
-      }
+      "info": [
+        { "fieldName": "Nombre", "fieldValue": "Albert Llica" },
+        { "fieldName": "Teléfono", "fieldValue": "(+51) 971461734" },
+        { "fieldName": "Experiencia", "fieldValue": "2 años" },
+        { "fieldName": "Correo electrónico", "fieldValue": "albertllica@gmail.com" },
+        { "fieldName": "Nacionalidad", "fieldValue": "Peruano" },
+        { "fieldName": "Freelance", "fieldValue": "Disponible" },
+        { "fieldName": "Idiomas", "fieldValue": "Español, Inglés" }
+      ]
     },
     "experience": {
       "title": "Experiencia",
@@ -128,7 +132,20 @@
     },
     "skills": {
       "title": "Habilidades",
-      "description": "He trabajado en varios proyectos, tanto de forma independiente como en equipo. Tengo experiencia en desarrollo frontend, backend y full-stack. También he trabajado en proyectos que involucran gestión de bases de datos, desarrollo de APIs y computación en la nube."
+      "description": "He trabajado en varios proyectos, tanto de forma independiente como en equipo. Tengo experiencia en desarrollo frontend, backend y full-stack. También he trabajado en proyectos que involucran gestión de bases de datos, desarrollo de APIs y computación en la nube.",
+      "skilllist": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" },
+        { "name": "React" },
+        { "name": "Tailwind CSS" },
+        { "name": "Next.js" },
+        { "name": "Node.js" },
+        { "name": "Figma" },
+        { "name": "Python" },
+        { "name": "FastAPI" },
+        { "name": "Flutter" }
+      ]
     }
   },
   "contact": {
