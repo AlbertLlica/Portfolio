@@ -11,7 +11,7 @@ import Stats from "@/components/Stats";
 
 const handleDownload = () => {
   const link = document.createElement("a");
-  link.href = "/public/cv/Albert_Llica_CV.pdf";
+  link.href = "/public/assets/cv/cv.pdf";
   link.download = "Albert_Llica_CV.pdf";
   link.click();
 };
