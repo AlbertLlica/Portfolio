@@ -7,12 +7,13 @@
     "contact": "contact"
   },
   "header": {
-    "hireMe": "Hire me"
+    "hireMe": "Hire Me",
+    "whatsappMessage": "Hi, I want to hire your services."
   },
   "home": {
     "profession": "Software Developer",
-    "greeting": "Hello I'm",
-    "intro": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.",
+    "greeting": "Hi, I'm",
+    "intro": "Passionate about creating innovative digital solutions, combining skills in web and mobile development with data analysis using cutting-edge technologies.",
     "downloadCV": "Download CV"
   },
   "services": {
@@ -20,26 +21,26 @@
       {
         "num": "01",
         "title": "Web Development",
-        "description": "I create responsive and user-friendly websites using modern technologies.",
-        "href": ""
+        "description": "I build responsive websites and full-stack applications using modern technologies like Next.js, React, and Tailwind CSS.",
+        "href": "/contact"
       },
       {
         "num": "02",
-        "title": "UX/UI Design",
-        "description": "I create responsive and user-friendly websites using modern technologies.",
-        "href": ""
+        "title": "Mobile Development",
+        "description": "I develop cross-platform apps with Flutter, integrating features like camera, audio, MQTT, and cloud storage.",
+        "href": "/contact"
       },
       {
         "num": "03",
-        "title": "Data Analysis",
-        "description": "I analyze and visualize data to extract meaningful insights.",
-        "href": ""
+        "title": "Cloud & Serverless",
+        "description": "I design IoT architectures and distributed cloud applications using Google Cloud, Cloud Run, BigQuery, and Terraform for infrastructure as code.",
+        "href": "/contact"
       },
       {
         "num": "04",
-        "title": "Mobile Development",
-        "description": "I create responsive and user-friendly websites using modern technologies.",
-        "href": ""
+        "title": "Data Analysis & AI",
+        "description": "I perform data analysis, visualizations, and machine learning/deep learning models to extract valuable insights and automate processes.",
+        "href": "/contact"
       }
     ]
   },
@@ -52,7 +53,7 @@
     },
     "about": {
       "title": "About Me",
-      "description": "I am a passionate software developer with a strong background in web development. I have experience working with various programming languages and frameworks, and I am always eager to learn new technologies. I enjoy creating elegant and efficient solutions to complex problems, and I am committed to delivering high-quality work.",
+      "description": "Computer Science graduate with a solid background in software development, data structures, algorithms, and networking. Strong interest in Cloud Computing, Data Science, Generative AI, and Web Development. I have developed academic and professional projects applying modern technologies to solve real-world problems, focusing on scalable and innovative solutions. Scholarship recipient of the PRONABEC program, part of the top third group of my university, reflecting my commitment to excellence and continuous learning.",
       "info": [
         { "fieldName": "Name", "fieldValue": "Albert Llica" },
         { "fieldName": "Phone", "fieldValue": "(+51) 971461734" },
@@ -65,74 +66,114 @@
     },
     "experience": {
       "title": "Experience",
-      "description": "I have worked on various projects, both independently and as part of a team. I have experience in front-end development, back-end development, and full-stack development. I have also worked on projects involving database management, API development, and cloud computing.",
+      "description": "I have worked on academic and professional projects both independently and in teams, with experience in frontend, backend, and full-stack development. I have participated in the design and implementation of web and mobile applications, system optimization in production, data analysis, API development, and cloud technologies.",
       "items": [
         {
-          "position": "Software Developer",
-          "company": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "position": "Frontend Developer",
+          "company": "Freelance",
+          "duration": "February 2026 - Present"
         },
         {
-          "position": "Software Developer",
-          "company": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "position": "Data Analyst",
+          "company": "Freelance",
+          "duration": "January 2026 - Present"
         },
         {
-          "position": "Software Developer",
-          "company": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "position": "Fullstack Developer",
+          "company": "Statistics School, Universidad Nacional de San Agustín (UNSA) – Arequipa, Peru",
+          "duration": "October 2025 - Present"
         },
         {
-          "position": "Software Developer",
-          "company": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "position": "DevAIOps Developer",
+          "company": "Ops Range – São Paulo, Brazil (Remote)",
+          "duration": "November 2024 - Present"
         },
         {
-          "position": "Software Developer",
-          "company": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "position": "Frontend Developer",
+          "company": "NASA Space (NASA Hackathon) – Arequipa, Peru",
+          "duration": "October 2023 - 2024"
         },
         {
-          "position": "Software Developer",
-          "company": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "position": "Frontend Developer",
+          "company": "Am Digital – Arequipa, Peru",
+          "duration": "January 2023 - March 2023"
         }
       ]
     },
     "education": {
       "title": "Education",
-      "description": "I have worked on various projects, both independently and as part of a team. I have experience in front-end development, back-end development, and full-stack development. I have also worked on projects involving database management, API development, and cloud computing.",
+      "description": "Academic training focused on computer science and the development of modern technical skills, complemented by courses and certifications that strengthen my knowledge in software development, data analysis, cloud computing, and emerging technologies.",
       "items": [
         {
-          "institution": "Software Developer",
-          "degree": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "institution": "Universidad Nacional de San Agustín (UNSA)",
+          "degree": "Computer Science",
+          "duration": "April 2020 - January 2025"
         },
         {
-          "institution": "Software Developer",
-          "degree": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "institution": "Amazon Web Services (AWS)",
+          "degree": "Introduction to Cloud",
+          "duration": "March 2024"
         },
         {
-          "institution": "Software Developer",
-          "degree": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "institution": "DataCamp",
+          "degree": "Deep Learning",
+          "duration": "May 2024"
         },
         {
-          "institution": "Software Developer",
-          "degree": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "institution": "Udemy",
+          "degree": "Web Development",
+          "duration": "April 2023 - June 2024"
         },
         {
-          "institution": "Software Developer",
-          "degree": "Tech Company",
-          "duration": "Jan 2022 - Present"
+          "institution": "Platzi",
+          "degree": "Flutter",
+          "duration": "January 2025 - May 2025"
+        },
+        {
+          "institution": "Platzi",
+          "degree": "Power BI",
+          "duration": "January 2025"
+        },
+        {
+          "institution": "Platzi",
+          "degree": "WordPress",
+          "duration": "January 2025"
+        },
+        {
+          "institution": "Platzi",
+          "degree": "Unity",
+          "duration": "November 2024 - January 2025"
+        },
+        {
+          "institution": "Platzi",
+          "degree": "UX/UI",
+          "duration": "March 2025 - April 2025"
+        },
+        {
+          "institution": "Platzi",
+          "degree": "Figma",
+          "duration": "May 2025"
+        },
+        {
+          "institution": "Platzi",
+          "degree": "Pandas and Numpy",
+          "duration": "March 2025 - May 2025"
+        },
+        {
+          "institution": "Platzi",
+          "degree": "Python",
+          "duration": "January 2025"
+        },
+        {
+          "institution": "Amazon Web Services (AWS)",
+          "degree": "Cloud Computing",
+          "duration": "August 2025 - December 2025"
         }
       ]
     },
     "skills": {
       "title": "Skills",
-      "description": "I have worked on various projects, both independently and as part of a team. I have experience in front-end development, back-end development, and full-stack development. I have also worked on projects involving database management, API development, and cloud computing.",
+      "description": "I have strong soft skills such as leadership, teamwork, critical thinking, adaptability, continuous learning, effective communication, and analytical problem-solving. I have participated in multiple projects independently and collaboratively, gaining experience in frontend, backend, and full-stack development, database management, API development, and cloud computing, allowing me to adapt to different technical environments and challenges.",
       "skilllist": [
         { "name": "HTML5" },
         { "name": "CSS3" },
@@ -144,18 +185,19 @@
         { "name": "Figma" },
         { "name": "Python" },
         { "name": "FastAPI" },
-        { "name": "Flutter" }
+        { "name": "Flutter" },
+        { "name": "C++" }
       ]
     }
   },
   "contact": {
     "form": {
-      "heading": "Let's work together!",
-      "paragraph": "I'm open to new opportunities and collaborations. Whether you have a project in mind or just want to say hi, feel free to reach out. I look forward to hearing from you!",
-      "firstName": "First name",
-      "lastName": "Last name",
+      "heading": "Let's Work Together!",
+      "paragraph": "I am open to new opportunities and collaborations. Whether you have a project in mind or just want to say hi, feel free to contact me. I look forward to hearing from you!",
+      "firstName": "First Name",
+      "lastName": "Last Name",
       "email": "Email",
-      "phone": "Phone number",
+      "phone": "Phone",
       "servicePlaceholder": "Select a service",
       "servicesLabel": "Services",
       "services": {
@@ -174,50 +216,60 @@
     }
   },
   "stats": [
-    { "num": 2, "text": "Years of Experience" },
-    { "num": 26, "text": "Projects Completed" },
-    { "num": 8, "text": "Technologies Mastered" },
+    { "num": 12, "text": "Years of experience" },
+    { "num": 26, "text": "Completed projects" },
+    { "num": 8, "text": "Technologies mastered" },
     { "num": 500, "text": "Code commits" }
   ],
   "work": {
     "project": "project",
     "categories": {
-      "frontend": "frontend"
+      "frontend": "frontend",
+      "cloud": "cloud",
+      "mobile": "mobile",
+      "data": "data",
+      "devAiOps": "devAiOps",
+      "fullstack": "fullstack"
     },
     "tooltip": {
-      "live": "Live project",
-      "github": "GitHub repository"
+      "github": "GitHub Repository"
     },
     "items": [
       {
         "num": "01",
-        "category": "frontend",
+        "category": "data",
         "title": "Project 1",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
-        "image": "/assets/work/thumb1.png",
-        "live": "",
-        "github": "https://github.com/example/project1",
-        "stack": [{"name": "Html 5"}, {"name": "Css 3"}, {"name": "JavaScript"}]
+        "description": "Visualizer for Multivariable Time Series Data Imputation with Air Quality datasets using Deep Learning models",
+        "image": "/assets/work/AQI.png",
+        "github": "https://github.com/AlbertLlica/AirQuality-Imputation-Dashboard",
+        "stack": [{"name": "Next.js"}, {"name": "Python"}, {"name": "Echarts"}]
       },
       {
         "num": "02",
-        "category": "frontend",
+        "category": "fullstack",
         "title": "Project 2",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
-        "image": "/assets/work/thumb2.png",
-        "live": "",
-        "github": "https://github.com/example/project2",
-        "stack": [{"name": "Html 5"}, {"name": "Tailwind.css"}, {"name": "JavaScript"}]
+        "description": "Schedule and user management dashboard for the Statistics School at Universidad Nacional de San Agustín, Arequipa",
+        "image": "/assets/work/Estadistica.png",
+        "github": "https://github.com/fm1299/SchedulePlanning-front",
+        "stack": [{"name": "Next.js"}, {"name": "FastAPI"}, {"name": "PostgreSQL"}]
       },
       {
         "num": "03",
-        "category": "frontend",
-        "title": "Project 3 ",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque.",
-        "image": "/assets/work/thumb3.png",
-        "live": "",
-        "github": "https://github.com/example/project3",
-        "stack": [{"name": "Html 5"}, {"name": "Tailwind.css"}, {"name": "JavaScript"}]
+        "category": "cloud",
+        "title": "Project 3",
+        "description": "This project implements a distributed IoT architecture using Edge, Fog, and Serverless Cloud, where simulated sensors generate data processed locally and securely sent to the cloud for AI analysis. Backend runs on Google Cloud Run, storing data in BigQuery and Cloud Storage, with web and mobile interfaces, all managed via Terraform.",
+        "image": "/assets/work/cloud.png",
+        "github": "https://github.com/AlbertLlica/IoT-Cloud-Fog-Computing",
+        "stack": [{"name": "Python"}, {"name": "GCP"}, {"name": "Next.js"}, {"name": "Flutter"}, {"name": "Terraform"}]
+      },
+      {
+        "num": "04",
+        "category": "mobile",
+        "title": "Project 4",
+        "description": "Flutter app (web/mobile) that connects to HiveMQ via MQTT to capture photos and audio, upload them to Google Cloud Storage, and display URLs with preview on mobile; requires Flutter 3.10+, camera, microphone, and internet permissions, using service account for testing only.",
+        "image": "/assets/work/mobile.png",
+        "github": "https://github.com/AlbertLlica/IoT-app-fire-detector",
+        "stack": [{"name": "Python"}, {"name": "GCP"}, {"name": "Next.js"}, {"name": "Flutter"}, {"name": "Terraform"}]
       }
     ]
   }

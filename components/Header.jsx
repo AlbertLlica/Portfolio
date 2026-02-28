@@ -23,12 +23,18 @@ const Header = () => {
 
         {/* desktop nav & hire me button*/}
         <div className="hidden xl:flex items-center gap-8">
-           <Nav /> 
-           <Link href="/contact">
-            <Button>{t("header.hireMe")}</Button>
-           </Link>
-           <LanguageSwitcher />
-        </div>
+        <Nav /> 
+        <a
+          href={`https://wa.me/51971461834?text=${encodeURIComponent(
+            t("header.whatsappMessage")
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button>{t("header.hireMe")}</Button>
+        </a>
+        <LanguageSwitcher />
+      </div>
         
         {/*mobile nav*/}
         <div className="xl:hidden">

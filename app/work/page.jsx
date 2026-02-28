@@ -74,20 +74,6 @@ const Work = () => {
               <div className="border border-white/20" />
               {/*buttons */}
               <div className="flex items-center gap-4">
-                {/*live project button */}
-                <Link href={project.live}>
-                <TooltipProvider delayDuration={100}>
-                  <Tooltip>
-                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5
-                     flex items-center justify-center group">
-                      <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{t("work.tooltip.live")}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-                </Link>
                 {/*github button */}
                 <Link href={project.github}>
                 <TooltipProvider delayDuration={100}>

@@ -11,7 +11,8 @@ import {
   FaPython,
 } from "react-icons/fa";
 
-import {SiTailwindcss, SiNextdotjs, SiFastapi, SiFlutter} from "react-icons/si";
+
+import {SiTailwindcss, SiNextdotjs, SiFastapi, SiFlutter, SiCplusplus} from "react-icons/si";
 
 // data is now driven from translation files
 
@@ -44,6 +45,7 @@ const skillIconMap = {
   "Python": <FaPython/>,
   "FastAPI": <SiFastapi/>,
   "Flutter": <SiFlutter/>,
+  "C++": <SiCplusplus/>,
 };
 
 const Resume = () => {
