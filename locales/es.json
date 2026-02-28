@@ -216,8 +216,8 @@
     }
   },
   "stats": [
-    { "num": 12, "text": "Años de experiencia" },
-    { "num": 26, "text": "Proyectos completados" },
+    { "num": 2, "text": "Años de experiencia" },
+    { "num": 10, "text": "Proyectos completados" },
     { "num": 8, "text": "Tecnologías dominadas" },
     { "num": 500, "text": "Commits de código" }
   ],
