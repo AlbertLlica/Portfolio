@@ -9,14 +9,22 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/public/cv/Albert_Llica_CV.pdf";
+  link.download = "Albert_Llica_CV.pdf";
+  link.click();
+};
+
+
 const Home = () => {
   const { t } = useLanguage();
   return (
   <section className="overflow-x-hidden">
-    <div className="container mx-auto min-h-screen flex flex-col justify-center items-center xl:justify-between xl:pt-8 xl:pb-24">
-      <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between">
+    <div className="container mx-auto flex flex-col justify-center items-center xl:justify-between xl:pt-8 xl:pb-24">
+      <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between gap-8 lg:gap-12 xl:gap-28">
         {/* text */}
-        <div className="text-center xl:text-left order-2 xl:order-none px-4">
+        <div className="text-center xl:text-left order-2 xl:order-none px-4 max-w-[92vw] sm:max-w-[600px] xl:max-w-[520px]">
           <span className="text-lg sm:text-xl">{t("home.profession")}</span>
           <h1 className="h1 mb-6">
             {t("home.greeting")} <br/> <span className="text-accent">Albert Llica</span>
@@ -26,10 +34,11 @@ const Home = () => {
           </p>
           {/*btn and socials */}
           <div className="flex flex-col xl:flex-row items-center gap-8">
-            <Button 
-              variant="outline" 
-              size="lg" 
+            <Button
+              variant="outline"
+              size="lg"
               className="uppercase flex items-center gap-2"
+              onClick={handleDownload}
             >
               <span>{t("home.downloadCV")}</span>
               <FiDownload className="text-xl" />
