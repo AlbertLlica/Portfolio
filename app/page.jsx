@@ -12,16 +12,16 @@ import Stats from "@/components/Stats";
 const Home = () => {
   const { t } = useLanguage();
   return (
-  <section className="h-full">
-    <div className="container mx-auto h-full">
-      <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+  <section className="overflow-x-hidden">
+    <div className="container mx-auto min-h-screen flex flex-col justify-center items-center xl:justify-between xl:pt-8 xl:pb-24">
+      <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between">
         {/* text */}
-        <div className="text-center xl:text-left order-2 xl:order-none">
-          <span className="text-xl">{t("home.profession")}</span>
+        <div className="text-center xl:text-left order-2 xl:order-none px-4">
+          <span className="text-lg sm:text-xl">{t("home.profession")}</span>
           <h1 className="h1 mb-6">
             {t("home.greeting")} <br/> <span className="text-accent">Albert Llica</span>
           </h1>
-          <p className="max-w-[500px] mb-9 text-white/80">
+          <p className="max-w-[90vw] sm:max-w-[500px] mb-9 text-white/80">
             {t("home.intro")}
           </p>
           {/*btn and socials */}
@@ -45,7 +45,7 @@ const Home = () => {
           </div>
         </div>
         {/* photo*/}
-        <div className="order-1 xl:order-none mb-8 xl:mb-0">
+        <div className="order-1 xl:order-none mb-8 xl:mb-0 flex-shrink-0">
           <Photo />
         </div>
       </div>
