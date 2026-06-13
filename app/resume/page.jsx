@@ -1,6 +1,5 @@
 "use client"
 
-import { icons } from "lucide-react";
 import {
   FaHtml5,
   FaCss3,

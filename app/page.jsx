@@ -9,14 +9,6 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
-const handleDownload = () => {
-  const link = document.createElement("a");
-  link.href = "/public/assets/cv/cv.pdf";
-  link.download = "Albert_Llica_CV.pdf";
-  link.click();
-};
-
-
 const Home = () => {
   const { t } = useLanguage();
   return (
